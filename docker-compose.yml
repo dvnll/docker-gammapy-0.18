@@ -1,0 +1,13 @@
+version: '3'
+services:
+    jupyter:
+        image: gammapy-018:v1
+        container_name: gammapy-018
+        volumes:
+            - ./volume:/home/gammapyuser/volume
+
+        restart: 'no'
+        ports:
+            - 8888:8888
+        user: gammapyuser
+        command: "conda run -n gammapy --no-capture-output jupyter notebook --no-browser --ip='*' --NotebookApp.token='' --NotebookApp.password=''"
