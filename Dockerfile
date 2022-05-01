@@ -14,7 +14,7 @@ WORKDIR /home/gammapyuser
 
 RUN curl -O https://gammapy.org/download/install/gammapy-0.18.2-environment.yml
 RUN conda env create -f gammapy-0.18.2-environment.yml -n gammapy
-RUN conda run -n gammapy conda install -c conda-forge h5py
+RUN conda run -n gammapy conda install -c conda-forge h5py'<3.2'
 RUN conda run -n gammapy conda install psutil
 RUN conda run -n gammapy pip install jupyterlab
 RUN conda clean --all --yes
