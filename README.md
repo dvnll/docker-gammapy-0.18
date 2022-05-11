@@ -7,5 +7,5 @@ docker build -t gammapy-018:v1 .
 
 Adopt docker-compose.yml and run
 ```bash
-docker-compose up
+docker-compose up -d
 ```
